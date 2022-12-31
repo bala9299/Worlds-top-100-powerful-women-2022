@@ -13,7 +13,7 @@ st.markdown("""<style>
                 unsafe_allow_html = True)
 
 with header:
-    st.title("Top 100 womens of the WORLD")
+    st.title("Top 100 most powerful womens of the WORLD")
     st.markdown("This data was determined by four main metrics: **money**, **media**, **influence** and **domains**.")
     st.text("You can find here only the top 100 womens Country, Age and Category.")
  
