@@ -23,23 +23,23 @@ with dataset:
         st.write(df.head())
 
 with search:
-    S = st.radio("**INDEX**",['Rank','Country','Age','Category'])
+    S = st.radio("**INDEX**",['Rank.','Country.','Age.','Category.'])
 
-    if S == 'Rank':
+    if S == 'Rank.':
         st.subheader("Rank")
         R = st.selectbox("**Select here**",df.RANK,0)
         r = df.loc[df.RANK==R]["NAME"].iloc[0]
         st.markdown(f'This women holds rank **{R}** in the world : **{r}**.')
 
-    if S == 'Country':
-        st.subheader("Country")
+    if S == 'Country.':
+        st.subheader("Country.")
         c= pd.DataFrame(df['LOCATION'].value_counts())
         st.bar_chart(c,use_container_width=True)  
         C = st.selectbox("**Choose country**",df['LOCATION'].unique(),0) 
         rank =  df[df["LOCATION"]==C]
         st.table(rank)
 
-    if S == "Age":
+    if S == "Age.":
         st.subheader("Age")      
         age = st.select_slider("**Choose age**",options=df["AGE"].unique())
         a = df[df["AGE"] == age]
@@ -54,7 +54,7 @@ with search:
             min=df['NAME'].loc[df.AGE == age ].iloc[0]
             st.write(f"Name : **{min}**. and Age : **{age}**")
 
-    if S == "Category":
+    if S == "Category.":
         st.subheader("Category")
         cat = pd.DataFrame(df['CATEGORY'].value_counts())
         st.bar_chart(cat,use_container_width=True)
