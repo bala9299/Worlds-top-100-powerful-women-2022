@@ -29,7 +29,7 @@ with search:
         st.subheader("Rank")
         R = st.selectbox("**Select here**",df.RANK,0)
         r = df.loc[df.RANK==R]["NAME"].iloc[0]
-        st.markdown(f'This womens holds rank **{R}** in the world : **{r}**.')
+        st.markdown(f'This women holds rank **{R}** in the world : **{r}**.')
 
     if S == 'Country':
         st.subheader("Country")
