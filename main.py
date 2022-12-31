@@ -5,9 +5,7 @@ header = st.container()
 dataset = st.container()
 search = st.container()
 st.markdown("""<style>
-               .main {
-                background-color: #F5F5F5
-                }
+               .main 
                 </style>
                 """,
                 unsafe_allow_html = True)
