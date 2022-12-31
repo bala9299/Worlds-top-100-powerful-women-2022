@@ -17,7 +17,7 @@ with header:
  
 with dataset:
     df = pd.read_csv("data//womens.csv")
-    st.markdown("**The list of top 100 powerful womens**")
+    st.markdown("**The list of top 100 powerful womens**.")
     st.write(df)
     if st.checkbox("Show me the top five womens of the world."):
         st.write(df.head())
